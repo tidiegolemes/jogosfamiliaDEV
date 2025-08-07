@@ -1,47 +1,408 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.65">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
-    p.p3 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.85); -webkit-text-stroke: rgba(0, 0, 0, 0.85)}
-    span.s1 {font-kerning: none}
-    span.s2 {font-kerning: none; background-color: #b3b3b3}
-    span.s3 {font: 12.0px Helvetica; font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noite de Jogos em Família</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f9ff; /* Azul céu bem claro */
+        }
+        h1, h2, .game-title {
+            font-family: 'Fredoka One', cursive;
+        }
+        .game-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 280px; /* Largura fixa para os cards */
+        }
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        /* Esconde as seções de jogo por padrão */
+        #game-mimica, #game-musica, #game-caras, #game-eusou, #game-charadas {
+            display: none;
+        }
+        .game-content-card {
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
 </head>
-<body>
-<p class="p1"><span class="s1"></span><br></p>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>SI Delivery</b></span></h1>
-<p class="p3"><span class="s1">Conveniência Santa Isabel</span></p>
-<p class="p4"><span class="s1">Carregando...</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Nosso Cardápio</b></span></h2>
-<p class="p1"><span class="s1"></span><br></p>
-<p class="p3"><span class="s1">Aguardando produtos...</span></p>
-<p class="p6"><span class="s2">Que tal adicionar?</span><span class="s3"> </span><span class="s2">Peça de Novo</span><span class="s3"> </span><span class="s2">Meus Pedidos</span><span class="s3"><span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"></span><br></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Seu Pedido</b></span></h2>
-<p class="p3"><span class="s1">Seu carrinho está vazio.</span></p>
-<p class="p6"><span class="s2">Aplicar</span><span class="s3"><span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"></span><br></p>
-<p class="p4"><span class="s1">SubtotalR$ 0,00</span></p>
-<p class="p4"><span class="s1">Desconto- R$ 0,00</span></p>
-<p class="p4"><span class="s1">TotalR$ 0,00</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Informações para Entrega</b></span></h3>
-<p class="p6"><span class="s2">Continuar</span><span class="s3"><span class="Apple-converted-space"> </span></span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Forma de Pagamento</b></span></h3>
-<p class="p6"><span class="s2">Pagar na Entrega</span><span class="s3"> </span><span class="s2">Pagar Online</span><span class="s3"><span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"></span><br></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Pedido Recebido!</b></span></h3>
-<p class="p3"><span class="s1">Seu pedido foi enviado com sucesso. Acompanhe o status na aba "Meus Pedidos".</span></p>
-<p class="p6"><span class="s2">Fechar</span><span class="s3"><span class="Apple-converted-space"> </span></span></p>
+<body class="text-gray-800">
+
+    <!-- Tela Principal (Menu de Jogos) -->
+    <main id="main-menu" class="container mx-auto px-4 py-8 text-center">
+        <header class="mb-12">
+            <h1 class="text-5xl md:text-6xl text-blue-600 mb-2">Noite de Jogos</h1>
+            <p class="text-xl text-gray-600">Escolha um clássico para começar a diversão!</p>
+        </header>
+
+        <div class="flex flex-wrap justify-center gap-8">
+            <!-- Card Mímica -->
+            <div onclick="startGame('mimica')" class="game-card cursor-pointer bg-white p-8 rounded-2xl shadow-lg border-4 border-transparent hover:border-yellow-400">
+                <div class="text-6xl mb-4">🎭</div>
+                <h2 class="text-3xl text-yellow-600 mb-2">Mímica</h2>
+                <p class="text-gray-500">Adivinhe a palavra através de gestos. Proibido falar!</p>
+            </div>
+
+            <!-- Card Qual é a Música -->
+            <div onclick="startGame('musica')" class="game-card cursor-pointer bg-white p-8 rounded-2xl shadow-lg border-4 border-transparent hover:border-pink-400">
+                <div class="text-6xl mb-4">🎶</div>
+                <h2 class="text-3xl text-pink-600 mb-2">Qual é a Música?</h2>
+                <p class="text-gray-500">Leia um trecho da letra e adivinhe o nome da música.</p>
+            </div>
+
+            <!-- Card Caras & Caretas -->
+            <div onclick="startGame('caras')" class="game-card cursor-pointer bg-white p-8 rounded-2xl shadow-lg border-4 border-transparent hover:border-green-400">
+                <div class="text-6xl mb-4">🤪</div>
+                <h2 class="text-3xl text-green-600 mb-2">Caras & Caretas</h2>
+                <p class="text-gray-500">Coloque na testa e deixe seus amigos darem as dicas!</p>
+            </div>
+
+            <!-- Card Eu Sou...? -->
+            <div onclick="startGame('eusou')" class="game-card cursor-pointer bg-white p-8 rounded-2xl shadow-lg border-4 border-transparent hover:border-purple-400">
+                <div class="text-6xl mb-4">🤔</div>
+                <h2 class="text-3xl text-purple-600 mb-2">Eu Sou...?</h2>
+                <p class="text-gray-500">Quem é você? Faça perguntas para adivinhar o personagem!</p>
+            </div>
+            
+            <!-- Card Charadas -->
+            <div onclick="startGame('charadas')" class="game-card cursor-pointer bg-white p-8 rounded-2xl shadow-lg border-4 border-transparent hover:border-orange-400">
+                <div class="text-6xl mb-4">💡</div>
+                <h2 class="text-3xl text-orange-600 mb-2">Charadas</h2>
+                <p class="text-gray-500">Quebre a cabeça para resolver estes enigmas divertidos!</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Tela do Jogo: Mímica -->
+    <section id="game-mimica" class="container mx-auto px-4 py-8 text-center">
+        <h1 class="text-5xl text-yellow-600 mb-4 game-title">Mímica 🎭</h1>
+        <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-2xl mx-auto game-content-card">
+            <p id="mimica-word" class="text-4xl font-bold text-gray-700">Clique em "Nova Palavra" para começar!</p>
+        </div>
+        <div class="mt-8">
+            <button onclick="newMimicaWord()" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transition-transform transform hover:scale-105">
+                Nova Palavra
+            </button>
+            <button onclick="showMenu()" class="ml-4 text-gray-500 hover:text-gray-800 font-semibold py-2 px-4">
+                Voltar ao Menu
+            </button>
+        </div>
+    </section>
+
+    <!-- Tela do Jogo: Qual é a Música? -->
+    <section id="game-musica" class="container mx-auto px-4 py-8 text-center">
+        <h1 class="text-5xl text-pink-600 mb-4 game-title">Qual é a Música? 🎶</h1>
+        <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-2xl mx-auto game-content-card">
+            <p id="musica-clue" class="text-2xl italic text-gray-700 mb-4">Clique em "Nova Música" para começar!</p>
+            <p id="musica-answer" class="text-xl font-bold text-pink-500 opacity-0 transition-opacity duration-500"></p>
+        </div>
+        <div class="mt-8">
+            <button onclick="newMusicaClue()" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transition-transform transform hover:scale-105">
+                Nova Música
+            </button>
+            <button onclick="revealMusicaAnswer()" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-4 px-8 rounded-full text-xl shadow-lg transition-transform transform hover:scale-105">
+                Revelar Resposta
+            </button>
+            <button onclick="showMenu()" class="mt-4 md:mt-0 md:ml-4 text-gray-500 hover:text-gray-800 font-semibold py-2 px-4">
+                Voltar ao Menu
+            </button>
+        </div>
+    </section>
+
+    <!-- Tela do Jogo: Caras & Caretas -->
+    <section id="game-caras" class="container mx-auto px-4 py-8 text-center">
+        <h1 class="text-5xl text-green-600 mb-4 game-title">Caras & Caretas 🤪</h1>
+        <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-2xl mx-auto game-content-card">
+            <p id="caras-word" class="text-4xl font-bold text-gray-700">Clique em "Começar Rodada"!</p>
+            <div id="caras-timer" class="text-6xl font-bold text-green-500 mt-4">60</div>
+        </div>
+        <div class="mt-8">
+            <button id="caras-start-btn" onclick="startCarasRound()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transition-transform transform hover:scale-105">
+                Começar Rodada
+            </button>
+            <div id="caras-game-btns" class="hidden">
+                 <button onclick="carasCorrect()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transition-transform transform hover:scale-105">
+                    ACERTOU!
+                </button>
+                <button onclick="carasPass()" class="bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transition-transform transform hover:scale-105 ml-4">
+                    PASSAR
+                </button>
+            </div>
+            <button onclick="showMenu()" class="mt-4 md:mt-0 md:ml-4 text-gray-500 hover:text-gray-800 font-semibold py-2 px-4">
+                Voltar ao Menu
+            </button>
+        </div>
+    </section>
+
+    <!-- Tela do Jogo: Eu Sou...? -->
+    <section id="game-eusou" class="container mx-auto px-4 py-8 text-center">
+        <h1 class="text-5xl text-purple-600 mb-4 game-title">Eu Sou...? 🤔</h1>
+        <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-2xl mx-auto game-content-card">
+            <p id="eusou-word" class="text-4xl font-bold text-gray-700">Clique em "Começar Rodada"!</p>
+            <div id="eusou-timer" class="text-6xl font-bold text-purple-500 mt-4">60</div>
+        </div>
+        <div class="mt-8">
+            <button id="eusou-start-btn" onclick="startEusouRound()" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transition-transform transform hover:scale-105">
+                Começar Rodada
+            </button>
+            <div id="eusou-game-btns" class="hidden">
+                 <button onclick="eusouCorrect()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transition-transform transform hover:scale-105">
+                    ACERTEI!
+                </button>
+                <button onclick="eusouPass()" class="bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transition-transform transform hover:scale-105 ml-4">
+                    PASSAR
+                </button>
+            </div>
+            <button onclick="showMenu()" class="mt-4 md:mt-0 md:ml-4 text-gray-500 hover:text-gray-800 font-semibold py-2 px-4">
+                Voltar ao Menu
+            </button>
+        </div>
+    </section>
+
+    <!-- Tela do Jogo: Charadas -->
+    <section id="game-charadas" class="container mx-auto px-4 py-8 text-center">
+        <h1 class="text-5xl text-orange-600 mb-4 game-title">Charadas 💡</h1>
+        <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-2xl mx-auto game-content-card">
+            <p id="charada-question" class="text-2xl italic text-gray-700 mb-4">Clique em "Nova Charada" para começar!</p>
+            <p id="charada-answer" class="text-xl font-bold text-orange-500 opacity-0 transition-opacity duration-500"></p>
+        </div>
+        <div class="mt-8">
+            <button onclick="newCharada()" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transition-transform transform hover:scale-105">
+                Nova Charada
+            </button>
+            <button onclick="revealCharadaAnswer()" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-4 px-8 rounded-full text-xl shadow-lg transition-transform transform hover:scale-105">
+                Revelar Resposta
+            </button>
+            <button onclick="showMenu()" class="mt-4 md:mt-0 md:ml-4 text-gray-500 hover:text-gray-800 font-semibold py-2 px-4">
+                Voltar ao Menu
+            </button>
+        </div>
+    </section>
+
+
+    <script>
+        // --- BANCO DE DADOS DOS JOGOS ---
+
+        const mimicaDB = [
+            'Jogar futebol', 'Escovar os dentes', 'Dirigir um carro', 'Tocar guitarra', 'Pintar uma parede',
+            'Dançar balé', 'Nadar', 'Ler um livro', 'Cozinhar', 'Tirar uma foto', 'O Rei Leão', 'Homem-Aranha',
+            'Harry Potter', 'Titanic', 'Gato', 'Cachorro', 'Elefante', 'Macaco', 'Super-herói', 'Médico', 'Professor'
+        ];
+
+        const musicaDB = [
+            { clue: '"...Pensei que era um céu de estrelas, mas eram os olhos dela, que refletiam os meus..."', answer: 'Olhos Certos - Detonautas' },
+            { clue: '"...Garçom, aqui, nessa mesa de bar, você já cansou de escutar, centenas de casos de amor..."', answer: 'Garçom - Reginaldo Rossi' },
+            { clue: '"...É o amor, que mexe com a minha cabeça e me deixa assim..."', answer: 'É o Amor - Zezé Di Camargo & Luciano' },
+            { clue: '"...Já não tenho mais a minha casa, nem o meu lugar..."', answer: 'Índios - Legião Urbana' },
+            { clue: '"...Se eu não te amasse tanto assim, talvez perdesse os sonhos dentro de mim..."', answer: 'Se Eu Não Te Amasse Tanto Assim - Ivete Sangalo' },
+            { clue: '"...Tô aproveitando cada segundo, antes que isso aqui vire uma tragédia..."', answer: 'Show das Poderosas - Anitta' },
+            { clue: '"...Meu escritório é na praia, eu tô sempre na área..."', answer: 'Zóio de Lula - Charlie Brown Jr.' }
+        ];
+
+        const carasDB = [
+            'Pizza', 'Celular', 'Pelé', 'Mickey Mouse', 'Brasil', 'Torre Eiffel', 'Lasanha', 'Cadeira',
+            'Professor', 'Médica', 'Cachorro', 'Gato', 'Leão', 'Neymar', 'Xuxa', 'Batman', 'Pão de Açúcar',
+            'Churrasco', 'Abacaxi', 'Óculos de sol'
+        ];
+
+        const eusouDB = [
+            'Albert Einstein', 'Cleópatra', 'Mona Lisa', 'Sherlock Holmes', 'Darth Vader',
+            'Mulher-Maravilha', 'Santos Dumont', 'Carmen Miranda', 'Ayrton Senna', 'Pikachu',
+            'Mario Bros', 'Goku', 'Harry Potter', 'Capitão Nascimento', 'Saci Pererê'
+        ];
+
+        const charadasDB = [
+            { question: 'O que é, o que é? Tem coroa, mas não é rei, tem escamas, mas não é peixe?', answer: 'O Abacaxi' },
+            { question: 'O que é, o que é? Anda com os pés na cabeça?', answer: 'O Piolho' },
+            { question: 'O que é, o que é? Quanto mais se tira, maior fica?', answer: 'O Buraco' },
+            { question: 'O que é, o que é? Cai em pé e corre deitado?', answer: 'A Chuva' },
+            { question: 'Tenho cidades, mas não tenho casas. Tenho montanhas, mas não tenho árvores. Tenho água, mas não tenho peixes. O que sou eu?', answer: 'O Mapa' },
+            { question: 'O que é que nasce grande e morre pequeno?', answer: 'O Lápis' }
+        ];
+
+        // --- LÓGICA DO APP ---
+
+        const mainMenu = document.getElementById('main-menu');
+        const gameScreens = {
+            mimica: document.getElementById('game-mimica'),
+            musica: document.getElementById('game-musica'),
+            caras: document.getElementById('game-caras'),
+            eusou: document.getElementById('game-eusou'),
+            charadas: document.getElementById('game-charadas')
+        };
+        
+        let currentWordIndex = -1;
+        let timerInterval;
+
+        // Função para mostrar o menu principal e esconder as telas de jogo
+        function showMenu() {
+            mainMenu.style.display = 'block';
+            Object.values(gameScreens).forEach(screen => screen.style.display = 'none');
+            
+            // Reseta os jogos com timer ao voltar ao menu
+            resetCarasGame();
+            resetEusouGame();
+        }
+
+        // Função para iniciar um jogo
+        function startGame(gameName) {
+            mainMenu.style.display = 'none';
+            gameScreens[gameName].style.display = 'block';
+        }
+        
+        function getRandomItem(db) {
+            let newIndex = Math.floor(Math.random() * db.length);
+            // Garante que não repita o mesmo item em sequência
+            while (newIndex === currentWordIndex) {
+                newIndex = Math.floor(Math.random() * db.length);
+            }
+            currentWordIndex = newIndex;
+            return db[newIndex];
+        }
+
+        // --- LÓGICA ESPECÍFICA DE CADA JOGO ---
+
+        // Mímica
+        const mimicaWordEl = document.getElementById('mimica-word');
+        function newMimicaWord() {
+            const word = getRandomItem(mimicaDB);
+            mimicaWordEl.textContent = word;
+        }
+
+        // Qual é a Música?
+        const musicaClueEl = document.getElementById('musica-clue');
+        const musicaAnswerEl = document.getElementById('musica-answer');
+        function newMusicaClue() {
+            const item = getRandomItem(musicaDB);
+            musicaClueEl.textContent = item.clue;
+            musicaAnswerEl.textContent = item.answer;
+            musicaAnswerEl.classList.add('opacity-0');
+        }
+        function revealMusicaAnswer() {
+            musicaAnswerEl.classList.remove('opacity-0');
+        }
+
+        // Caras & Caretas
+        const carasWordEl = document.getElementById('caras-word');
+        const carasTimerEl = document.getElementById('caras-timer');
+        const carasStartBtn = document.getElementById('caras-start-btn');
+        const carasGameBtns = document.getElementById('caras-game-btns');
+        let carasTimeLeft = 60;
+        let carasTimer;
+
+        function startCarasRound() {
+            carasStartBtn.classList.add('hidden');
+            carasGameBtns.classList.remove('hidden');
+            carasTimeLeft = 60;
+            carasTimerEl.textContent = carasTimeLeft;
+            carasTimerEl.classList.remove('text-red-500');
+            newCarasWord();
+            carasTimer = setInterval(() => {
+                carasTimeLeft--;
+                carasTimerEl.textContent = carasTimeLeft;
+                if (carasTimeLeft <= 10) {
+                    carasTimerEl.classList.add('text-red-500');
+                }
+                if (carasTimeLeft <= 0) {
+                    clearInterval(carasTimer);
+                    carasWordEl.textContent = "O tempo acabou!";
+                    carasGameBtns.classList.add('hidden');
+                    carasStartBtn.textContent = "Jogar Novamente";
+                    carasStartBtn.classList.remove('hidden');
+                }
+            }, 1000);
+        }
+        function newCarasWord() {
+            if (carasTimeLeft > 0) {
+                carasWordEl.textContent = getRandomItem(carasDB);
+            }
+        }
+        function carasCorrect() { newCarasWord(); }
+        function carasPass() { newCarasWord(); }
+        function resetCarasGame() {
+            clearInterval(carasTimer);
+            carasTimeLeft = 60;
+            carasTimerEl.textContent = carasTimeLeft;
+            carasTimerEl.classList.remove('text-red-500');
+            carasWordEl.textContent = 'Clique em "Começar Rodada"!';
+            carasGameBtns.classList.add('hidden');
+            carasStartBtn.textContent = "Começar Rodada";
+            carasStartBtn.classList.remove('hidden');
+        }
+
+        // Eu Sou...?
+        const eusouWordEl = document.getElementById('eusou-word');
+        const eusouTimerEl = document.getElementById('eusou-timer');
+        const eusouStartBtn = document.getElementById('eusou-start-btn');
+        const eusouGameBtns = document.getElementById('eusou-game-btns');
+        let eusouTimeLeft = 60;
+        let eusouTimer;
+
+        function startEusouRound() {
+            eusouStartBtn.classList.add('hidden');
+            eusouGameBtns.classList.remove('hidden');
+            eusouTimeLeft = 60;
+            eusouTimerEl.textContent = eusouTimeLeft;
+            eusouTimerEl.classList.remove('text-red-500');
+            newEusouWord();
+            eusouTimer = setInterval(() => {
+                eusouTimeLeft--;
+                eusouTimerEl.textContent = eusouTimeLeft;
+                if (eusouTimeLeft <= 10) {
+                    eusouTimerEl.classList.add('text-red-500');
+                }
+                if (eusouTimeLeft <= 0) {
+                    clearInterval(eusouTimer);
+                    eusouWordEl.textContent = "O tempo acabou!";
+                    eusouGameBtns.classList.add('hidden');
+                    eusouStartBtn.textContent = "Jogar Novamente";
+                    eusouStartBtn.classList.remove('hidden');
+                }
+            }, 1000);
+        }
+        function newEusouWord() {
+            if (eusouTimeLeft > 0) {
+                eusouWordEl.textContent = getRandomItem(eusouDB);
+            }
+        }
+        function eusouCorrect() { newEusouWord(); }
+        function eusouPass() { newEusouWord(); }
+        function resetEusouGame() {
+            clearInterval(eusouTimer);
+            eusouTimeLeft = 60;
+            eusouTimerEl.textContent = eusouTimeLeft;
+            eusouTimerEl.classList.remove('text-red-500');
+            eusouWordEl.textContent = 'Clique em "Começar Rodada"!';
+            eusouGameBtns.classList.add('hidden');
+            eusouStartBtn.textContent = "Começar Rodada";
+            eusouStartBtn.classList.remove('hidden');
+        }
+
+        // Charadas
+        const charadaQuestionEl = document.getElementById('charada-question');
+        const charadaAnswerEl = document.getElementById('charada-answer');
+        function newCharada() {
+            const item = getRandomItem(charadasDB);
+            charadaQuestionEl.textContent = item.question;
+            charadaAnswerEl.textContent = item.answer;
+            charadaAnswerEl.classList.add('opacity-0');
+        }
+        function revealCharadaAnswer() {
+            charadaAnswerEl.classList.remove('opacity-0');
+        }
+
+    </script>
 </body>
 </html>
